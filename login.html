@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>  
+
+
+<body>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+<div class="container">
+<img src="http://www.completesuccess.in/images/login.png">
+<form ng-app="myApp" ng-controller="validateCtrl" 
+name="myForm" novalidate>
+
+<style type = "text/css">
+         body {
+			background-image: url(https://www.planwallpaper.com/static/images/6768666-1080p-wallpapers.jpg);
+			background-size: 100% 1080px;
+			background-repeat: no-repeat;
+		}
+		.container{
+			width: 460px;
+			height: 445px;
+			text-align: center;
+			margin: 0 auto;
+			background-color: rgba(44,89,135,0.8);
+			border-radius: 4px;
+			margin-top: 150px;
+		}
+		.container img{
+			width: 120px;
+			height: 130px;
+			margin-top: -60px;
+			margin-bottom: 20px;
+
+		}
+
+		input {
+			height: 45px;
+			width: 300px;
+			font-size: 15px;
+			margin-bottom: 30px;
+			background-color: #fef;
+			padding-left: 30px;
+		}
+
+
+		/*span{
+			color: #b3d9ff;
+			font-size: 15px;
+		}
+	</style>
+	
+<p>
+<input type="text" name="user" ng-model="user" required placeholder="Please enter your Username."><br>
+<span style="color:#ccff66" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+<span ng-show="myForm.user.$error.required">Username is required.</span>
+</span>
+</p>
+
+<p>
+<input type="email" name="email" ng-model="email" required placeholder=" Please enter you email id."><br>
+<span style="color:#ccff66" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+<span ng-show="myForm.email.$error.required"> <br>Email is required.</span>
+<span ng-show="myForm.email.$error.email">Invalid email address.</span>
+</span>
+</p>
+<p>
+<input type="password" name="psw" ng-model= "password" required  ng-minlength="8"  placeholder="Please enter your password" /><br>	
+<span style="color:#ccff66" ng-show="myForm.psw.$dirty && myForm.psw.$invalid">Please enter minimum 8 characters</span>
+</p>
+
+<button class="btn btn-lg btn-info" ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid || myForm.psw.$dirty && myForm.psw.$invalid">LOGIN 
+</button>
+
+</form>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+    $scope.user = '';
+    $scope.email = '';
+    $scope.password = '';
+});
+</script>
+
+</body>
+</html>
